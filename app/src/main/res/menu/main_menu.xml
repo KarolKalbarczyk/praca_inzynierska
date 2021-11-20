@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/see_plan"
+        android:icon="@mipmap/arrow_down"
+        android:title="Zobacz plan"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/see_signin"
+        android:icon="@mipmap/arrow_up"
+        android:title="abcd"
+        app:showAsAction="always"/>
+</menu>

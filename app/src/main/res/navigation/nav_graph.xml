@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graoh"
+    app:startDestination="@id/listActivity">
+    <fragment
+        android:id="@+id/listActivity"
+        android:name="com.example.pam.AntiqueList.AntiqueListFragment"
+        android:label="activity_list"
+        tools:layout="@layout/antique_recycler" >
+        <action
+            android:id="@+id/action_listActivity_to_antiqueFragment"
+            app:destination="@id/antiqueFragment" />
+        <action
+            android:id="@+id/action_listActivity_to_planFragment"
+            app:destination="@id/planFragment" />
+        <action
+            android:id="@+id/action_listActivity_to_signinFragment"
+            app:destination="@id/signinFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/antiqueFragment"
+        android:name="com.example.pam.AntiqueMain.AntiqueFragment"
+        android:label="AntiqueFragment"
+        tools:layout="@layout/fragment_opinion_list">
+        <action
+            android:id="@+id/action_antiqueFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+        <action
+            android:id="@+id/action_antiqueFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.example.pam.Gallery.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.pam.History.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/planFragment"
+        android:name="com.example.pam.Plan.PlanFragment"
+        android:label="plan_fragment"
+        tools:layout="@layout/plan_fragment" >
+        <action
+            android:id="@+id/action_planFragment_to_antiqueFragment"
+            app:destination="@id/antiqueFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signinFragment"
+        android:name="com.example.pam.Auth.SigninFragment"
+        android:label="signin_fragment"
+        tools:layout="@layout/signin_fragment" />
+</navigation>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">PAM</string>
+    <string name="from_here">%s stad</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Hala">Hala stulecia</string>
+    <string name="Katedra">Katedra Katedra Katedra Katedra</string>
+    <string name="hala_desc">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</string>
+    <string name="katedra_desc">b</string>
+    <string name="googlemaptxt">Zobacz na google map</string>
+    <string name="history_text">Zobacz historię</string>
+    <string name="history1">"verylong text1 verylong text2 verylong text3 verylong text4 verylong text5 verylong text6 verylong text7 verylong text8 verylong text9 "</string>
+    <string name="gallery_button">Zobacz galerię</string>
+    <string name="sort_button">Posortuj po odleglosci ode mnie</string>
+    <string name="send">Wyślij</string>
+    <string name="name">Nazwa</string>
+    <string name="szklarnia">Szklarnia pwr</string>
+    <string name="write_opinion">Napisz opinię</string>
+    <string name="signin_success">Napisz opinię</string>
+    <string name="signin_failure">Pomyślnie zalogowano</string>
+    <string name="signin_button_text">Zaloguj</string>
+    <string name="logout_button_text">Wyloguj</string>
+    <string name="sign_in_button">Zaloguj</string>
+    <string name="add_to_plan">Dodaj do planu</string>
+    <string name="remove_from_plan">Usun z planu</string>
+
+</resources>

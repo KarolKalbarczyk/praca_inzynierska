@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="60dp"
+        android:layout_height="57dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ratingText"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Rated it"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingStars"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="@+id/ratingStars" />
+
+    <RatingBar
+        android:id="@+id/ratingStars"
+        style="?android:attr/ratingBarStyleIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:progressTint="#FFEB3B"
+        android:stepSize="1"
+        app:layout_constraintStart_toEndOf="@+id/ratingText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/avatar"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="57dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/avatar"
+        />
+
+    <LinearLayout
+        android:id="@+id/expandableView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:background="@drawable/customborder"
+        app:layout_constraintTop_toBottomOf="@+id/avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="165dp">
+
+   <!-- <ImageView
+        android:id="@+id/opinionPhoto"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="2dp" />-->
+
+    <TextView
+        android:id="@+id/opinionText"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@+id/ratingStars"
+        tools:layout_editor_absoluteX="212dp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/expand"
+        android:layout_width="59dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        android:text=""
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expandableView" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

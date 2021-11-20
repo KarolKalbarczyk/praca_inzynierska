@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="250dp">
+
+    <ImageView
+        android:id="@+id/planPartImage"
+        android:layout_width="250dp"
+        android:layout_height="245dp"
+        android:gravity="start"
+
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/planPartName"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/planPartImage"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/planPartImage"
+        app:layout_constraintTop_toTopOf="@+id/planPartImage" />
+
+    <TextView
+        android:id="@+id/planPartDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/planPartImage"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="20dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/planPartImage"
+        app:layout_constraintEnd_toEndOf="@+id/planPartImage" />
+
+    <Button
+        android:id="@+id/moveUpButton"
+        android:layout_width="29dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="84dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/planPartImage"
+        android:foreground="@mipmap/arrow_up_foreground"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/moveDownButton"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:text="Button"
+        android:foreground="@mipmap/arrow_down_foreground"
+        app:layout_constraintStart_toEndOf="@+id/planPartImage"
+        app:layout_constraintTop_toBottomOf="@+id/moveUpButton" />
+
+    <Button
+        android:id="@+id/removeFromPlanButton"
+        android:layout_width="28dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/moveUpButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/completeButton"
+        android:layout_width="29dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/moveDownButton"
+        app:layout_constraintTop_toBottomOf="@+id/removeFromPlanButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
