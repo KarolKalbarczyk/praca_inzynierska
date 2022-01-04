@@ -36,11 +36,6 @@ class OpinionServer(private val context: Context, resources: Resources) : IOpini
 
 
     override fun sendOpinion(rating: Int, opinion: String, bitmap: Bitmap?, antiqueId: Int){
-        val token = AuthState.token
-
-        if (token == null){
-            return
-        }
 
         val string64 = if (bitmap != null) encodeTobase64(bitmap) else ""
 
@@ -53,7 +48,7 @@ class OpinionServer(private val context: Context, resources: Resources) : IOpini
         val body: RequestBody = json.toString().toRequestBody(JSON)
         val request: Request = Request.Builder()
             .url(url)
-            .header("authorization", token)
+            .header("Authorization", AuthState.token!!)
             .post(body)
             .build()
         client.newCall(request).execute().use {  }
