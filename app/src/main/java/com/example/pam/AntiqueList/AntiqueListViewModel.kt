@@ -69,8 +69,8 @@ class AntiqueListViewModel(
                 val location = await(fusedLocationClient.lastLocation)
                 val answers = FloatArray(1)
                 Location.distanceBetween(
-                    51.1145608584675, //location.latitude,
-                    17.063686719001097,//location.longitude,
+                    location.latitude,
+                    location.longitude,
                     entry.latitude,
                     entry.longitude,
                     answers
