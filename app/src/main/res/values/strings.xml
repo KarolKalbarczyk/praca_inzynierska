@@ -31,5 +31,7 @@ Obecnie hala i jej okolice są bardzo licznie odwiedzane przez zwiedzających ni
     <string name="add_to_plan">Dodaj do planu</string>
     <string name="remove_from_plan">Usun z planu</string>
     <string name="ratedit">Ocenił/a na</string>
+    <string name="authServer"></string>
+    <string name="serverUrl"></string>
 
 </resources>

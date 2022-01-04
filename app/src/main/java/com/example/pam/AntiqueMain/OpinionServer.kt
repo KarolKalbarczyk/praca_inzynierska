@@ -2,11 +2,13 @@ package com.example.pam.AntiqueMain
 
 import android.app.Activity
 import android.content.Context
+import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.util.Base64
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
+import com.example.pam.Auth.AuthState
 import com.example.pam.R
 import com.google.android.gms.common.util.JsonUtils
 import okhttp3.MediaType
@@ -26,14 +28,20 @@ public interface IOpinionServer{
     fun getOpinions(antiqueId: Int,  activity: Activity, populateFunction: (List<OpinionDTO>) -> Unit,)
 }
 
-class OpinionServer(private val context: Context) : IOpinionServer {
+class OpinionServer(private val context: Context, resources: Resources) : IOpinionServer {
 
-    private val url = "http://192.168.8.100:5001/PAM"
+    private val url = resources.getString(R.string.serverUrl)
 
     val JSON: MediaType = "application/json; charset=utf-8".toMediaType()
 
 
     override fun sendOpinion(rating: Int, opinion: String, bitmap: Bitmap?, antiqueId: Int){
+        val token = AuthState.token
+
+        if (token == null){
+            return
+        }
+
         val string64 = if (bitmap != null) encodeTobase64(bitmap) else ""
 
         val client = OkHttpClient.Builder().connectTimeout(100, TimeUnit.MINUTES).build();
@@ -45,18 +53,13 @@ class OpinionServer(private val context: Context) : IOpinionServer {
         val body: RequestBody = json.toString().toRequestBody(JSON)
         val request: Request = Request.Builder()
             .url(url)
+            .header("authorization", token)
             .post(body)
             .build()
         client.newCall(request).execute().use {  }
     }
 
     override fun getOpinions(antiqueId: Int,  activity: Activity, populateFunction: (List<OpinionDTO>) -> Unit,){
-
-        val bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.hala3_foreground);
-        val list = listOf(OpinionDTO(3, "Najładniejszy zabytek jaki widziałem", 1, bitmap),
-            OpinionDTO(1, "Polibuda zrujnowała mi życie na wieki wieków amen", 1, null))
-        activity.runOnUiThread { populateFunction(list) }
-        return
 
         val client = OkHttpClient.Builder().connectTimeout(100, TimeUnit.MINUTES).build();
 

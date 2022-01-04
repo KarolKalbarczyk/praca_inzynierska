@@ -39,7 +39,7 @@ class SigninFragment : Fragment() {
         Log.i("activityCreate", "aaaaa")
 
         viewModel = ViewModelProvider(this).get(SigninViewModel::class.java)
-        viewModel.init(AuthService())
+        viewModel.init(AuthService(resources))
         initView(false)
     }
 

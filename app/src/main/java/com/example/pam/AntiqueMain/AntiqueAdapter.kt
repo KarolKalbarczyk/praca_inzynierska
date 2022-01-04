@@ -15,6 +15,7 @@ import androidx.core.widget.doOnTextChanged
 import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.Database.Antique
+import com.example.pam.Auth.AuthState
 import com.example.pam.Database.PlanPartRepository
 import com.example.pam.R
 import kotlinx.android.synthetic.main.fragment_antique.view.*
@@ -64,7 +65,7 @@ class OpinionRecyclerViewAdapter(
 
     override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
         context = recyclerView.context
-        opinionServer = OpinionServer(context)
+        opinionServer = OpinionServer(context, res)
     }
 
     override fun getItemViewType(position: Int): Int = position
@@ -107,7 +108,8 @@ class OpinionRecyclerViewAdapter(
 
         fun changeSendButtonState(){
             if (view.sendMessage.text.isBlank()
-                || view.ratingBar.rating.toInt() == 0) {
+                || view.ratingBar.rating.toInt() == 0
+                || !AuthState.isSignedIn) {
                 view.buttonSend.setOnClickListener {  }
                 view.buttonSend.setBackgroundColor(res.getColor(R.color.gray))
             }
