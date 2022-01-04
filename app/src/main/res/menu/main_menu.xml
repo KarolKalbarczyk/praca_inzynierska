@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/see_plan"
-        android:icon="@mipmap/arrow_down"
+        android:icon="@mipmap/plan_foreground"
         android:title="Zobacz plan"
         app:showAsAction="always"/>
     <item
         android:id="@+id/see_signin"
-        android:icon="@mipmap/arrow_up"
+        android:icon="@mipmap/default_avatar"
         android:title="abcd"
         app:showAsAction="always"/>
 </menu>

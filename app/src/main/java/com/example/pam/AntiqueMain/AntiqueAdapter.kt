@@ -129,7 +129,7 @@ class OpinionRecyclerViewAdapter(
 
         view.googleMap.setOnClickListener { mapStarter(antique.latitude, antique.longitude) }
         view.planButton.setOnClickListener { AddToPlan() }
-        view.planButton.text = res.getString(if (planPartId == null) R.string.add_to_plan else R.string.remove_from_plan)
+        view.planButton.foreground = (res.getDrawable(if (planPartId == null) R.mipmap.add_plan_foreground else R.mipmap.remove_plan_foreground))
         view.mainPhoto.setImageResource(antique.mainPhotoId)
         view.antiqueName.text = res.getString(antique.nameId)
         view.description.text = res.getString(antique.descriptionId)

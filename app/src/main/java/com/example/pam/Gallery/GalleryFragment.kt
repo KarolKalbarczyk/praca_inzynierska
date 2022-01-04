@@ -2,12 +2,13 @@ package com.example.pam.Gallery
 
 import android.content.Context
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
+import androidx.core.os.bundleOf
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import com.example.pam.AntiqueList.KEY
 import com.example.pam.R
 import com.example.pam.SightseeingApp
@@ -27,23 +28,33 @@ class GalleryFragment : Fragment() {
         Thread {
             val photos = (requireActivity().application as SightseeingApp).repository.dao.getPhotos(antiqueId)
             requireActivity().runOnUiThread {
-                view.gallery.adapter = GalleryAdapter(requireContext(), photos.map { it.photoId })
+                view.gallery.adapter = GalleryAdapter(requireContext(), photos.map { it.photoId }, findNavController())
                 view.gallery.numColumns = 2
             }
         }.start()
+        setHasOptionsMenu(true)
 
         return view
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.main_menu, menu)
+    }
 }
 
-
-class GalleryAdapter(context: Context, private val list: List<Int>) : ArrayAdapter<Int>(context,0, list){
+class GalleryAdapter(context: Context, private val list: List<Int>, private val navController: NavController) : ArrayAdapter<Int>(context,0, list){
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val view = ImageView(context)
         view.setPadding(8,8,8,8)
         view.setImageResource(list[position])
+        view.setOnClickListener {
+            navController.navigate(
+                R.id.action_galleryFragment_to_photoFragment,
+                bundleOf(KEY to list[position])
+            )
+        }
         return view
     }
 }

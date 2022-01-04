@@ -40,8 +40,8 @@ class PlanViewModel() : ViewModel() {
             val answers = FloatArray(1)
             for (i in 1..usedList.size - 1){
                 Location.distanceBetween(
-                    usedList[i - 1].latitude,//location.latitude,
-                    usedList[i - 1].longitude,//location.longitude,
+                    usedList[i - 1].latitude,
+                    usedList[i - 1].longitude,
                     usedList[i].latitude,
                     usedList[i].longitude,
                     answers

@@ -31,7 +31,7 @@ class AntiqueEntryAdapter(var dataset: List<AntiqueDTO>,
         val antique = dataset[position]
         holder.view.name.text = antique.name
         val distanceText = if (antique.distance > 1000)
-            "${antique.distance / 1000} km"
+            "${antique.distance.toDouble() / 1000} km"
         else
             "${antique.distance} m"
         holder.view.distance.text = resources.getString(R.string.from_here, distanceText)

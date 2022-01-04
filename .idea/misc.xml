@@ -12,7 +12,10 @@
         <entry key="..\:/Users/Karol/AndroidStudioProjects/PAM/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Karol/AndroidStudioProjects/PAM/app/src/main/res/layout/antique_list_element.xml" value="0.28894927536231885" />
         <entry key="..\:/Users/Karol/AndroidStudioProjects/PAM/app/src/main/res/layout/antique_recycler.xml" value="0.28894927536231885" />
-        <entry key="..\:/Users/Karol/AndroidStudioProjects/PAM/app/src/main/res/layout/fragment_antique.xml" value="0.25" />
+        <entry key="..\:/Users/Karol/AndroidStudioProjects/PAM/app/src/main/res/layout/fragment_antique.xml" value="0.5" />
+        <entry key="..\:/Users/Karol/AndroidStudioProjects/PAM/app/src/main/res/layout/fragment_opinion.xml" value="0.2359375" />
+        <entry key="..\:/Users/Karol/AndroidStudioProjects/PAM/app/src/main/res/layout/fragment_opinion_list.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/Karol/AndroidStudioProjects/PAM/app/src/main/res/layout/fragment_photo.xml" value="0.20572916666666666" />
         <entry key="..\:/Users/Karol/AndroidStudioProjects/PAM/app/src/main/res/layout/menu.xml" value="0.20572916666666666" />
         <entry key="..\:/Users/Karol/AndroidStudioProjects/PAM/app/src/main/res/layout/plan_fragment.xml" value="0.25" />
         <entry key="..\:/Users/Karol/AndroidStudioProjects/PAM/app/src/main/res/layout/plan_part.xml" value="0.5" />

@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Rated it"
+        android:text="@string/ratedit"
         android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="@+id/ratingStars"
         app:layout_constraintStart_toEndOf="@+id/avatar"

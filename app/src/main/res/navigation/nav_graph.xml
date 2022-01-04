@@ -35,7 +35,11 @@
         android:id="@+id/galleryFragment"
         android:name="com.example.pam.Gallery.GalleryFragment"
         android:label="fragment_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_galleryFragment_to_photoFragment"
+            app:destination="@id/photoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/historyFragment"
         android:name="com.example.pam.History.HistoryFragment"
@@ -55,4 +59,9 @@
         android:name="com.example.pam.Auth.SigninFragment"
         android:label="signin_fragment"
         tools:layout="@layout/signin_fragment" />
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.example.pam.Gallery.PhotoFragment"
+        android:label="fragment_photo"
+        tools:layout="@layout/fragment_photo" />
 </navigation>

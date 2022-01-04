@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory
 import android.util.Base64
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
+import com.example.pam.R
 import com.google.android.gms.common.util.JsonUtils
 import okhttp3.MediaType
 import okhttp3.MediaType.Companion.toMediaType
@@ -50,6 +51,13 @@ class OpinionServer(private val context: Context) : IOpinionServer {
     }
 
     override fun getOpinions(antiqueId: Int,  activity: Activity, populateFunction: (List<OpinionDTO>) -> Unit,){
+
+        val bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.hala3_foreground);
+        val list = listOf(OpinionDTO(3, "Najładniejszy zabytek jaki widziałem", 1, bitmap),
+            OpinionDTO(1, "Polibuda zrujnowała mi życie na wieki wieków amen", 1, null))
+        activity.runOnUiThread { populateFunction(list) }
+        return
+
         val client = OkHttpClient.Builder().connectTimeout(100, TimeUnit.MINUTES).build();
 
         val request: Request = Request.Builder()

@@ -39,11 +39,13 @@ class PlanEntryAdapter(var dataset: List<PlanPartDTO>,
             if (dist == null)
                 ""
             else if (dist > 1000)
-                "${dist / 1000} km"
+                "${dist.toDouble() / 1000} km"
             else
                 "${dist} m"
 
-        holder.view.planPartDistance.text = resources.getString(R.string.from_here, distanceText)
+        holder.view.planPartDistance.text = if (distanceText != "") distanceText else ""
+        if (planPart.done)
+            holder.view.setBackgroundColor(resources.getColor(R.color.gray))
         holder.view.planPartImage.setImageResource(planPart.photo)
         holder.view.completeButton.setOnClickListener { complete(planPart.id) }
         holder.view.removeFromPlanButton.setOnClickListener { remove(planPart.id) }

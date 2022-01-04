@@ -4,10 +4,8 @@ import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.shapes.RectShape
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -46,6 +44,7 @@ class PlanFragment : Fragment() {
                 bundleOf(KEY to id)
             ) }
         )
+        setHasOptionsMenu(true)
         configureRecycler(view)
         viewModel.init((requireActivity().application as SightseeingApp).planRepository, resources, requireActivity()::runOnUiThread)
         return view
@@ -79,4 +78,10 @@ class PlanFragment : Fragment() {
         }
     }
 
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.main_menu, menu)
     }
+
+}

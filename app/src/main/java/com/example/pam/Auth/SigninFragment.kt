@@ -3,10 +3,8 @@ package com.example.pam.Auth
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -32,6 +30,7 @@ class SigninFragment : Fragment() {
         password = view.password
         sendButton = view.signin
         sendButton.setOnClickListener { signin() }
+        setHasOptionsMenu(true)
         return view
     }
 
@@ -42,6 +41,11 @@ class SigninFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(SigninViewModel::class.java)
         viewModel.init(AuthService())
         initView(false)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.main_menu, menu)
     }
 
     private fun initView(wasTried: Boolean){

@@ -3,9 +3,7 @@ package com.example.pam.History
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -106,9 +104,16 @@ class HistoryFragment : Fragment() {
             val segments : List<AntiqueHistory> = (requireActivity().application as SightseeingApp).repository.dao.getHistory(antiqueId)
             requireActivity().runOnUiThread { historyAdapter.list = segments }
         }.start()
+        setHasOptionsMenu(true)
 
         return view
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.main_menu, menu)
+    }
+
 
 
 }

@@ -7,17 +7,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/history"
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#FFE500"
-            android:textColor="@color/black"
-            android:text="@string/history_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/description" />
+    <ImageView
+        android:id="@+id/history"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFE500"
+        android:foreground="@mipmap/history_foreground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
 
     <ImageView
         android:id="@+id/mainPhoto"
@@ -50,35 +49,60 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/antiqueName" />
 
-        <Button
-            android:id="@+id/googleMap"
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#22C629"
 
-            android:text="@string/googlemaptxt"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/history" />
+    <ImageView
+        android:id="@+id/googleMap"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#22C629"
+        android:foreground="@mipmap/maps_foreground"
+        android:text="@string/googlemaptxt"
+        app:layout_constraintStart_toEndOf="@+id/history"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
 
 
-        <Button
-            android:id="@+id/galleryButton"
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/gallery_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/googleMap" />
+    <ImageView
+        android:id="@+id/galleryButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:foreground="@mipmap/gallery_foreground"
+        android:text="@string/gallery_button"
+        app:layout_constraintStart_toEndOf="@+id/googleMap"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
 
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:progressTint="#FFEB3B"
+        android:stepSize="1"
+        app:layout_constraintStart_toEndOf="@+id/uploadAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/galleryButton" />
+
+    <ImageView
+        android:id="@+id/uploadAvatar"
+        android:layout_width="66dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/galleryButton"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <RelativeLayout
         android:id="@+id/layout_gchat_chatbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="168dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/galleryButton">
 
@@ -112,36 +136,14 @@
     </RelativeLayout>
 
     <ImageView
-        android:id="@+id/uploadAvatar"
-        android:layout_width="66dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="88dp"
-        android:scaleType="fitXY"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/galleryButton"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="96dp"
-        android:progressTint="#FFEB3B"
-        android:stepSize="1"
-        app:layout_constraintStart_toEndOf="@+id/uploadAvatar"
-        app:layout_constraintTop_toBottomOf="@+id/galleryButton" />
-
-    <Button
         android:id="@+id/planButton"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
+        android:foreground="@mipmap/add_plan_foreground"
         android:text="@string/add_to_plan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/galleryButton" />
+        app:layout_constraintStart_toEndOf="@+id/galleryButton"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

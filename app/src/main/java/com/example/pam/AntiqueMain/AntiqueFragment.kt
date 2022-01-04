@@ -9,9 +9,7 @@ import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
@@ -47,7 +45,13 @@ class AntiqueFragment : Fragment() {
             resources, requireActivity(), findNavController(), ::imageUpload, ::openGoogleMap, (requireActivity().application as SightseeingApp).planRepository
         )
         configureRecycler(view)
+        setHasOptionsMenu(true)
         return view
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.main_menu, menu)
     }
 
     private fun openGoogleMap(latitude: Double, longitude: Double) {

@@ -67,11 +67,10 @@ class AntiqueListViewModel(
             usedList.addAll(app.repository.allEntries.map { entry ->
 
                 val location = await(fusedLocationClient.lastLocation)
-                //mock.map{entry ->
                 val answers = FloatArray(1)
                 Location.distanceBetween(
-                    25.0,//location.latitude,
-                    25.0,//location.longitude,
+                    51.1145608584675, //location.latitude,
+                    17.063686719001097,//location.longitude,
                     entry.latitude,
                     entry.longitude,
                     answers
@@ -92,39 +91,39 @@ class AntiqueListViewModel(
         app.database.antiqueDao().delete()
         app.database.planDao().delete()
 
-        val antique1 = Antique(1, 1.0, 1.0, R.mipmap.hala1_foreground, R.string.Hala, R.string.hala_desc)
-        val antique2 = Antique(2, 2.0 , 2.0, R.mipmap.katedra_foreground, R.string.Katedra, R.string.katedra_desc)
-        val antique3 = Antique(3, 40.0 , 40.0, R.mipmap.default_avatar_foreground, R.string.szklarnia, R.string.katedra_desc)
+        val antique1 = Antique(1, 51.106927558951355, 17.077031918907025, R.mipmap.hala1_foreground, R.string.Hala, R.string.hala_desc)
+        val antique2 = Antique(2, 51.11440277739734, 17.046645771478378, R.mipmap.katedra_foreground, R.string.Katedra, R.string.katedra_desc)
+        val antique3 = Antique(3, 51.10970232856073, 17.07917185028402, R.mipmap.japanese_foreground, R.string.ogrod, R.string.katedra_desc)
 
         app.database.antiqueDao().insert(antique1)
         app.database.antiqueDao().insert(antique2)
         app.database.antiqueDao().insert(antique3)
-        app.database.antiqueDao().insert(Antique(4, 40.0 , 40.0, R.mipmap.arrow_up_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(5, 40.0 , 40.0, R.mipmap.arrow_down_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(6, 40.0 , 40.0, R.mipmap.hala2_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(7, 40.0 , 40.0, R.mipmap.hala3_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(8, 40.0 , 40.0, R.mipmap.hala4_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(9, 40.0 , 40.0, R.mipmap.rynek1_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(10, 40.0 , 40.0, R.mipmap.rynek2_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(11, 40.0 , 40.0, R.mipmap.ratusz1_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(12, 40.0 , 40.0, R.mipmap.ratusz2_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(13, 40.0 , 40.0, R.mipmap.ratusz3_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(14, 40.0 , 40.0, R.mipmap.katedra1_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(15, 40.0 , 40.0, R.mipmap.katedra2_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(16, 40.0 , 40.0, R.mipmap.katedra3_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(17, 40.0 , 40.0, R.mipmap.pomnik1_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(18, 40.0 , 40.0, R.mipmap.pomnik2_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(19, 40.0 , 40.0, R.mipmap.pomnik3_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(20, 40.0 , 40.0, R.mipmap.pomnik4_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(21, 40.0 , 40.0, R.mipmap.pomnik5_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(22, 40.0 , 40.0, R.mipmap.pomnik6_foreground, R.string.szklarnia, R.string.katedra_desc))
-        app.database.antiqueDao().insert(Antique(23, 40.0 , 40.0, R.mipmap.pomnik7_foreground, R.string.szklarnia, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(4, 40.0 , 40.0, R.mipmap.arrow_up_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(5, 40.0 , 40.0, R.mipmap.arrow_down_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(6, 40.0 , 40.0, R.mipmap.hala2_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(7, 40.0 , 40.0, R.mipmap.hala3_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(8, 40.0 , 40.0, R.mipmap.hala4_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(9, 40.0 , 40.0, R.mipmap.rynek1_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(10, 40.0 , 40.0, R.mipmap.rynek2_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(11, 40.0 , 40.0, R.mipmap.ratusz1_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(12, 40.0 , 40.0, R.mipmap.ratusz2_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(13, 40.0 , 40.0, R.mipmap.ratusz3_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(14, 40.0 , 40.0, R.mipmap.katedra1_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(15, 40.0 , 40.0, R.mipmap.katedra2_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(16, 40.0 , 40.0, R.mipmap.katedra3_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(17, 40.0 , 40.0, R.mipmap.pomnik1_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(18, 40.0 , 40.0, R.mipmap.pomnik2_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(19, 40.0 , 40.0, R.mipmap.pomnik3_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(20, 40.0 , 40.0, R.mipmap.pomnik4_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(21, 40.0 , 40.0, R.mipmap.pomnik5_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(22, 40.0 , 40.0, R.mipmap.pomnik6_foreground, R.string.ogrod, R.string.katedra_desc))
+        app.database.antiqueDao().insert(Antique(23, 40.0 , 40.0, R.mipmap.pomnik7_foreground, R.string.ogrod, R.string.katedra_desc))
         app.database.antiqueDao().insert(GalleryPhoto(0, R.mipmap.hala2_foreground,1))
         app.database.antiqueDao().insert(GalleryPhoto(0, R.mipmap.hala3_foreground,1))
         app.database.antiqueDao().insert(GalleryPhoto(0, R.mipmap.hala4_foreground,1))
         app.database.antiqueDao().insert(AntiqueHistory(0,1, 2, R.string.history1,0, 1))
         app.database.antiqueDao().insert(AntiqueHistory(0,2, 2, R.raw.video,1, 1))
-        app.database.antiqueDao().insert(AntiqueHistory(0,1, 1, R.string.history1,2, 1))
+        app.database.antiqueDao().insert(AntiqueHistory(0,1, 1, R.string.history2,2, 1))
         app.database.antiqueDao().insert(AntiqueHistory(0,0, 1, R.mipmap.hala2_foreground,3, 1))
 
         app.database.planDao().insertPlanPart(PlanPart(1, 3, false, 1))

@@ -1,27 +1,35 @@
 <resources>
-    <string name="app_name">PAM</string>
-    <string name="from_here">%s stad</string>
+    <string name="app_name"></string>
+    <string name="from_here">%s stąd</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Hala">Hala stulecia</string>
-    <string name="Katedra">Katedra Katedra Katedra Katedra</string>
-    <string name="hala_desc">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</string>
+    <string name="Katedra">ArchiKatedra</string>
+    <string name="hala_desc"> Hala widowiskowo-sportowa we Wrocławiu, na Zalesiu, w Parku Szczytnickim, ekspresjonistyczna, wzniesiona w latach 1911–1913 według projektu Maxa Berga.
+W 2006 roku hala została uznana za obiekt światowego dziedzictwa UNESCO. Wpisana do rejestru zabytków w 1962 oraz ponownie w 1977, wraz z zespołem architektonicznym obejmującym m.in. Pawilon Czterech Kopuł, Pergolę i Iglicę.
+Obecnie hala i jej okolice są bardzo licznie odwiedzane przez zwiedzających nie tylko ze względu na samą halę, ale także na bliskość Pergoli z Fontanną Multimedialną, Ogrodem Japońskim oraz zoo.</string>
     <string name="katedra_desc">b</string>
     <string name="googlemaptxt">Zobacz na google map</string>
     <string name="history_text">Zobacz historię</string>
-    <string name="history1">"verylong text1 verylong text2 verylong text3 verylong text4 verylong text5 verylong text6 verylong text7 verylong text8 verylong text9 "</string>
+    <string name="history1">
+        Fascynująca bywa przewrotność historii. Impulsem do zjednoczenia Prus i rozkwitu Breslau jako europejskiej metropolii była… porażka z Francuzami! W 1807 roku Hieronim Bonaparte po zaciekłej walce zdobył miasto. Rozkazał – rozebrać mury obronne! Chciał upokorzyć wroga, obnażyć go. Tymczasem – wpuścił powietrze między wąskie, ciasne uliczki. I nieintencjonalnie przyczynił się do dynamicznego rozwoju śląskiej stolicy. Z około 60 tys. mieszkańców na początku XIX wieku, w roku 1913 było ich już znacznie ponad 500 tys. I właśnie ci dumni breslauerczycy postanowili uroczyście uczcić setny jubileusz odezwy Fryderyka Wilhelma III i triumfu pod Lipskiem. W jaki sposób?
+    </string>
+    <string name="history2">
+        Pokazując całemu światu historię i gospodarcze muskuły Śląska. Na wzór Wystaw Światowych, które dziś znamy jako EXPO, zaplanowano wielką ekspozycję. A skoro w Paryżu na podobną okoliczność w 1889 roku zbudowano Wieżę Eiffla, w Breslau także zamierzano działać z przytupem. Tylko gdzie pomieścić tysiące wystawców i zwiedzających? Konieczne było zaprojektowanie nowej przestrzeni, z powodzeniem łączącej funkcje targowo-ekspozycyjne i rekreacyjne, która posłuży jako arena dla kolejnych wydarzeń przemysłowych, kulturalnych i sportowych. W sąsiedztwie jednego ze starszych ogrodów zoologicznych na świecie (wrocławskie Zoo powstało w 1865 roku) wygospodarowano pokaźną działkę i rozpisano konkurs. Spośród 43 zgłoszonych projektów wybrany został koncept miejskiego architekta, Maksa Berga. Wizjonerski. Nowatorski. Prekursorski. Ale drogi – 1,9 miliona ówczesnych marek.
+    </string>
     <string name="gallery_button">Zobacz galerię</string>
     <string name="sort_button">Posortuj po odleglosci ode mnie</string>
     <string name="send">Wyślij</string>
     <string name="name">Nazwa</string>
-    <string name="szklarnia">Szklarnia pwr</string>
+    <string name="ogrod">Ogród Japoński</string>
     <string name="write_opinion">Napisz opinię</string>
-    <string name="signin_success">Napisz opinię</string>
-    <string name="signin_failure">Pomyślnie zalogowano</string>
+    <string name="signin_success">Pomyślnie zalogowano</string>
+    <string name="signin_failure">Niepoprawne hasło lub nazwa użytkownika</string>
     <string name="signin_button_text">Zaloguj</string>
     <string name="logout_button_text">Wyloguj</string>
     <string name="sign_in_button">Zaloguj</string>
     <string name="add_to_plan">Dodaj do planu</string>
     <string name="remove_from_plan">Usun z planu</string>
+    <string name="ratedit">Ocenił/a na</string>
 
 </resources>
